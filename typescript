@@ -1,0 +1,23 @@
+Script started on Tue Apr 18 12:52:19 2023
+ls -la
+^DRestored session: Tue Apr 18 12:48:37 BST 2023
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Carls-MacBook-Pro.local/Users/csue/Documents/GitHub/sh-evidence]2;csue@Carls-MacBook-Pro]1;..b/sh-evidence]7;file://Carls-MacBook-Pro.local/Users/csue/Documents/GitHub/sh-evidence[0m[27m[24m[J╭─[38;5;040mcsue [38;5;239mat [38;5;033mCarl’s MacBook Pro [38;5;239min [1m[38;5;226m~/Documents/GitHub/sh-evidence[0m [38;5;239mon[00m [38;5;255mmain[38;5;202m✘✘✘[00m
+╰─±[00m [K[?1h=[?2004hlls -la[?1l>[?2004l
+]2;ls -G -la]1;lstotal 64
+drwxr-xr-x@ 11 csue  staff   352 Apr 18 12:52 [1m[36m.[39;49m[0m
+drwxr-xr-x@  7 csue  staff   224 Apr 18 12:52 [1m[36m..[39;49m[0m
+-rw-r--r--@  1 csue  staff  6148 Apr 18 12:01 .DS_Store
+drwxr-xr-x@ 14 csue  staff   448 Apr 18 10:58 [1m[36m.git[39;49m[0m
+-rw-r--r--   1 csue  staff  1809 Apr 18 12:28 .gitignore
+-rw-r--r--   1 csue  staff  1065 Apr 18 10:58 LICENSE
+-rw-r--r--   1 csue  staff   164 Apr 18 10:58 README.md
+-rwxr--r--@  1 csue  staff  1194 Apr 18 12:51 [31msh-evidence.sh[39;49m[0m
+drwxr-xr-x@  4 csue  staff   128 Apr 18 12:46 [1m[36msupport[39;49m[0m
+-rw-r--r--@  1 csue  staff  1725 Apr 18 12:52 text_to_image.py
+-rw-r--r--@  1 csue  staff   694 Apr 18 12:52 typescript
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Carls-MacBook-Pro.local/Users/csue/Documents/GitHub/sh-evidence]2;csue@Carls-MacBook-Pro]1;..b/sh-evidence]7;file://Carls-MacBook-Pro.local/Users/csue/Documents/GitHub/sh-evidence[0m[27m[24m[J╭─[38;5;040mcsue [38;5;239mat [38;5;033mCarl’s MacBook Pro [38;5;239min [1m[38;5;226m~/Documents/GitHub/sh-evidence[0m [38;5;239mon[00m [38;5;255mmain[38;5;202m✘✘✘[00m
+╰─±[00m [K[?1h=[?2004h[?2004l
+
+Saving session...completed.
+
+Script done on Tue Apr 18 12:52:20 2023
