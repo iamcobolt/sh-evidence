@@ -131,5 +131,6 @@ dmypy.json
 
 # Cursor files and rules
 .cursor/
+.cursorrules
 .cursor.json
 cursor_modules/
