@@ -128,8 +128,3 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .DS_Store
-
-# Cursor files and rules
-.cursor/
-.cursor.json
-cursor_modules/
