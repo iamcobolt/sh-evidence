@@ -1,63 +1,37 @@
-# Sh-evidence: Capture Shell Command Output with Style
+# Sh-evidence
 
-Sh-evidence is an innovative command-line utility designed to enhance your shell experience by capturing and preserving the output of executed commands. This powerful tool not only saves a comprehensive log of command output and error messages but also generates visually appealing screenshots of your shell window, providing a complete record of your command-line interactions.
-
-## Key Features
-
-- **Command Output Logging**: Automatically saves both standard output and error messages from executed shell commands.
-- **Visual Documentation**: Generates high-quality screenshots of your shell window, preserving the visual context of your command execution.
-- **Customizable Appearance**: Offers configurable options for fonts, padding, and visual effects to match your preferences.
-- **Seamless Integration**: Easily incorporates into your existing workflow with a simple pipe command.
+Sh-evidence is a command-line utility that captures and saves a copy of the output and error messages of the executed shell command in a log file, and also captures a screenshot of the shell window. The log file and screenshot are saved in a specified directory, and the screenshot is generated using a Python script that converts the log file into an image.
 
 ## Installation
 
-To get started with Sh-evidence, follow these steps:
+1. Clone this repository: `git clone https://github.com/your_username/sh-evidence.git`
+2. Run the `setup.sh` script to configure the default settings and create the necessary directories.
+3. You can modify the settings by editing the `~/.sh-evidence.conf` file.
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/your_username/sh-evidence.git
-   ```
-2. Run the setup script to configure default settings and create necessary directories:
-   ```
-   ./setup.sh
-   ```
-3. (Optional) Fine-tune your configuration by editing `~/.sh-evidence.conf`.
+## Usage
 
-## Usage Guide
+1. Navigate to the directory where you want to save the log file and screenshot.
+2. Echo the shell command that you want to capture.
+3. Add the `| sh-evidence` pipe at the end of the command to capture the output and error messages, and generate the screenshot.
+4. The log file and screenshot will be saved in the directory specified in the `~/.sh-evidence.conf` file.
 
-Integrating Sh-evidence into your command-line workflow is straightforward:
+## Configuration
 
-1. Navigate to your desired working directory.
-2. Execute your shell command as usual.
-3. Append `| sh-evidence` to your command to activate Sh-evidence:
-   ```
-   your_command | sh-evidence
-   ```
-4. Sh-evidence will capture the command output and generate a screenshot, saving both in the directory specified in your configuration.
+The `~/.sh-evidence.conf` file contains the default settings for the `sh-evidence` utility. You can modify these settings by editing the file. The settings include:
 
-## Advanced Configuration
+- `FONT`: The font used in the generated screenshot.
+- `PADDING`: The padding around the text in the generated screenshot.
+- `DROP_SHADOW`: Whether to add a drop shadow to the generated screenshot. Default: False
+- `EVIDENCE_DIR`: The directory where the log file and screenshot will be saved.
 
-Sh-evidence offers extensive customization options through the `~/.sh-evidence.conf` file:
+## License
 
-- `FONT`: Specify the font for screenshot text rendering.
-- `PADDING`: Adjust the padding around the text in screenshots for optimal readability.
-- `DROP_SHADOW`: Enable or disable drop shadow effects (Default: False).
-- `EVIDENCE_DIR`: Set the directory for storing log files and screenshots.
+This project is licensed under the MIT License. See the LICENSE file for more information.
 
-## Licensing
+## Contributing
 
-Sh-evidence is open-source software, released under the MIT License. For full details, please refer to the LICENSE file in the repository.
+Contributions are welcome! Please feel free to submit a pull request or open an issue if you find a bug or have a suggestion for improvement.
 
-## Community and Contributions
+## Credits
 
-We welcome contributions from the community! Whether you've found a bug, have a feature suggestion, or want to contribute code, please feel free to:
-
-- Submit pull requests
-- Open issues for bug reports or feature requests
-- Share your ideas for improvements
-
-Your input is valuable in making Sh-evidence even better!
-
-## Acknowledgments
-
-Sh-evidence was created by Carl Sue. We extend our gratitude to all contributors and users who have helped shape this project.
+This project was created by Carl Sue.
