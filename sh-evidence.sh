@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 ##Configuration and first run
 CONFIG_FILE="$HOME/.sh-evidence.conf"

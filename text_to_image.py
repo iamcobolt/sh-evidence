@@ -6,6 +6,8 @@ from pygments.lexers import get_lexer_by_name
 from pygments.formatters.img import ImageFormatter
 from pygments.styles import get_style_by_name
 
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 def get_token_style(token):
     style = get_style_by_name("monokai")
@@ -16,13 +18,35 @@ def read_log_file(log_file_path):
     with open(log_file_path, "r") as f:
         return f.read()
 
+def load_font_with_fallback(candidates, font_size):
+    for font_file in candidates:
+        try:
+            return ImageFont.truetype(font_file, font_size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
+
 def get_font(font_size):
-    font_file = os.path.join(os.getcwd(), "DejaVuSansMono.ttf")
-    try:
-        return ImageFont.truetype(font_file, font_size)
-    except OSError:
-        font_file = os.path.join(os.getcwd(), "./support/DejaVuSansMono.ttf")
-        return ImageFont.truetype(font_file, font_size)
+    return load_font_with_fallback(
+        [
+            os.path.join(SCRIPT_DIR, "DejaVuSansMono.ttf"),
+            os.path.join(SCRIPT_DIR, "support", "DejaVuSansMono.ttf"),
+            "DejaVuSansMono.ttf",
+        ],
+        font_size,
+    )
+
+def get_title_font(font_size):
+    return load_font_with_fallback(
+        [
+            "/System/Library/Fonts/Menlo.ttc",
+            "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+            "C:/Windows/Fonts/consola.ttf",
+            os.path.join(SCRIPT_DIR, "support", "DejaVuSansMono.ttf"),
+            "DejaVuSansMono.ttf",
+        ],
+        font_size,
+    )
 
 def add_padding(text, padding):
     text_lines = text.split("\n")
@@ -60,7 +84,7 @@ def create_image(highlighted_code, font, img_size, bg_color, text_color, padding
     draw.rectangle((bar_pos, tuple(map(sum, zip(bar_pos, bar_size)))), fill=(67, 73, 81))
     # Draw the title text on the top bar
     title_text = "Terminal"
-    title_font = ImageFont.truetype("/System/Library/Fonts/Menlo.ttc", 14)
+    title_font = get_title_font(14)
     title_text_bbox = draw.textbbox((0, 0), title_text, font=title_font)
     title_text_pos = (bar_pos[0] + 10, bar_pos[1] + (bar_size[1] - title_text_bbox[1]) // 2)
     draw.text(title_text_pos, title_text, font=title_font, fill=(180, 180, 180))
